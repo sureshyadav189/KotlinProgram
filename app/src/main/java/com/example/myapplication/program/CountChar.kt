@@ -5,8 +5,8 @@ fun countChar(){
     var word = ""
     var words = ArrayList<String>()
 
-    for(i in 0 until sent.length){
-        val ch = sent[i]
+    for(char in sent){
+        val ch = char
         if(ch != ' '){
             word += ch
         }

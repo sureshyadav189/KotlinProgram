@@ -25,3 +25,20 @@ fun numberSort(){
 
 
 }
+
+
+
+fun binarySearch(arr: IntArray, target: Int): Boolean {
+    var low = 0
+    var high = arr.size - 1
+
+    while (low <= high) {
+        val mid = (low + high) / 2
+        when {
+            arr[mid] == target -> return true
+            arr[mid] < target -> low = mid + 1
+            else -> high = mid - 1
+        }
+    }
+    return false
+}
